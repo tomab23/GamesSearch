@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import ScrollPage from "./helpers/ScrollPage";
 
 function App() {
-
   return (
-    <>
-      <h1>GamesSearch</h1>
-    </>
-  )
+    <BrowserRouter basename="/" future={{ v7_startTransition: true }}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <ScrollPage/>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
