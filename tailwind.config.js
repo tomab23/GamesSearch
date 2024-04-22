@@ -29,4 +29,28 @@ export default {
     }),
     require('daisyui')
   ],
+  daisyui: {
+    // voir congig daisy doc
+    themes: [
+      "light",
+      "dark",
+      "cupcake",
+      "emerald",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "forest",
+      "aqua",
+      "luxury",
+      "dracula",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+      "dim",
+      "sunset",
+    ],
+  },
 };

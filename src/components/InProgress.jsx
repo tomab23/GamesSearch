@@ -2,9 +2,9 @@ import React from "react";
 
 const InProgress = () => {
   return (
-    <div className="flex flex-col items-center mt-56 gap-3 text-2xl uppercase font-jersey">
-      <p>Loading...</p>
-      <progress className="progress w-[40vw] max-sm:w-[60vw]"></progress>
+    <div className="flex flex-col items-center 3xl:mt-52 xl:mt-32 max-xl:mt-52 gap-3 text-2xl uppercase font-jersey ">
+      <p className=" ">Loading...</p>
+      <progress className="progress w-[30vw] max-sm:w-[60vw]"></progress>
       <p>Please wait</p>
     </div>
   );
