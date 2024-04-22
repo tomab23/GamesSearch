@@ -17,7 +17,7 @@ const ThemesTest = ({ setTheme }) => {
 <div className="dropdown">
   <div tabIndex={0} role="button" className="btn m-1" onClick={toggleDropdown}>Change Theme</div>
     {isOpen && 
-      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mr-20">
+      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
         <li><button className='hover:underline' onClick={() => changeTheme("coffee")}>coffee</button></li>
         <li><button className='hover:underline' onClick={() => changeTheme("light")}>light</button></li>
         <li><button className='hover:underline' onClick={() => changeTheme("dark")}>dark</button></li>
