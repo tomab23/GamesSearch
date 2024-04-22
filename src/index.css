@@ -5,27 +5,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
-@layer base {
-    @font-face {
-        font-family: 'cat';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url('./assets/font/Cat\ Comic.otf') format('otf');
-    }
-    
-    @font-face {
-        font-family: 'sunny';
-        src: url('./assets/font/Sunny\ Spells\ Basic.ttf') format('ttf');
-    }
-
-    @font-face {
-        font-family: 'ret';
-        src: url('./assets/font/Retosta.otf') format('otf');
-    }
-
-
-  }

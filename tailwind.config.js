@@ -15,7 +15,6 @@ export default {
     },
     extend: {
       fontFamily: {
-        ret: ['"ret", sans-serif'],
         jersey: ['"Jersey 15", sans-serif'],
       },
     },
