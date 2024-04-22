@@ -27,5 +27,6 @@ export default {
         h3: { fontSize: theme("fontSize.lg") },
       });
     }),
+    require('daisyui')
   ],
 };
