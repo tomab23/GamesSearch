@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import InProgress from '../components/InProgress'
-import ThemesTest from '../components/ThemesTest'
+import Themes from '../components/Themes'
 
 const Home = () => {
 
@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div data-theme={theme} className='min-h-screen text-center'>
-      <ThemesTest setTheme={setTheme} />
+      <Themes setTheme={setTheme} />
       <h1 className='text-9xl max-sm:text-6xl font-jersey'>GamesSearch</h1>
       <h2 className='text-2xl max-sm:text-xl font-jersey'>Information about your games</h2>
 
