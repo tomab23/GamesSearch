@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Themes = ({ setTheme }) => {
+const Themes = () => {
 
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "coffee");
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -12,6 +13,13 @@ const Themes = ({ setTheme }) => {
         setIsOpen(!isOpen);
         setTheme(theme)
     }
+
+    useEffect(() => {
+      localStorage.setItem("theme", theme);
+      const localTheme = localStorage.getItem("theme");
+      document.querySelector("html").setAttribute("data-theme", localTheme);
+
+    },[theme])
 
     return (
 <div className="dropdown">

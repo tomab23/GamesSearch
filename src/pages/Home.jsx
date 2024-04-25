@@ -1,21 +1,38 @@
-import React, { useState } from 'react'
-import InProgress from '../components/InProgress'
-import Themes from '../components/Themes'
+import React from 'react'
+import SearchInput from '../components/custom/SearchInput'
+import HeaderHome from '../components/layout/HeaderHome'
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  
+  const navigate = useNavigate();
 
-  const [theme, setTheme] = useState("coffee")
+
+  const ValidSchema = Yup.object().shape({
+    name: Yup.string(),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+    },
+    validationSchema: ValidSchema,
+    onSubmit: (values) => {
+      navigate("/search", { state: values });
+    },
+  });
 
   return (
-    <div data-theme={theme} className='min-h-screen text-center'>
-      <Themes setTheme={setTheme} />
+    <div className='min-h-screen text-center'>
+      <HeaderHome />
       <h1 className='text-9xl max-sm:text-6xl font-jersey'>GamesSearch</h1>
       <h2 className='text-2xl max-sm:text-xl font-jersey'>Information about your games</h2>
 
-      <InProgress />
-
-      <p className='3xl:mt-72 xl:mt-40 max-xl:mt-60 max-sm:mt-52 italic font-jersey text-lg'>Application in development...</p>
-      <p className='mt-1 italic font-jersey text-lg'>Coming in 2024</p>
+      <form onSubmit={formik.handleSubmit}>
+        <SearchInput classname={"mt-20"} formik={formik} />  
+      </form>
     </div>
   )
 }
