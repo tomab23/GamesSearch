@@ -30,9 +30,18 @@ const SearchPage = () => {
       <Header />
       <SearchInput classname={"max-sm:mt-2"} formik={formik}  />
 
-      <div className='mt-20 px-5'>
-        <CardGame />
-      </div>
+    <div className='mt-20 flex gap-10 px-16 max-xl:px-20 max-md:px-12 flex-wrap mb-20'>
+        <CardGame game={"fallout 4"} />
+        <CardGame game={"fallout 3"} />
+        <CardGame game={"fallout"} />
+        <CardGame game={"fallout 76"} />
+        <CardGame game={"fallout 4"} />
+        <CardGame game={"fallout 3"} />
+        <CardGame game={"fallout"} />
+        <CardGame game={"fallout 76"} />
+    </div>
+    {/* max-sm:px-12 */}
+
     </div>
   )
 }

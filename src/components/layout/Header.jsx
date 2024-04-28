@@ -1,6 +1,7 @@
 import React from 'react'
 import ButtonBack from '../custom/ButtonBack'
 import { useNavigate } from 'react-router-dom'
+import Themes from '../Themes';
 
 const Header = ({ home }) => {
 
@@ -16,7 +17,7 @@ const Header = ({ home }) => {
     
         <div>
             {home &&
-            <button className='font-jersey text-xl cursor-pointer' onClick={goHome}>Home</button>
+            <button className='font-jersey text-xl cursor-pointer btn-ghost' onClick={goHome}>Home</button>
             }
         </div>
     </div>
