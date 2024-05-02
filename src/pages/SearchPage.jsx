@@ -9,7 +9,7 @@ import * as Yup from "yup";
 const SearchPage = () => {
   const location = useLocation();
 
-  console.log("search", location);
+  console.log("search", location.state?.name);
 
   const ValidSchema = Yup.object().shape({
     name: Yup.string(),
@@ -17,7 +17,7 @@ const SearchPage = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: location.state == null ? "" : location.state.name,
+      name: location.state == null ? "" : location.state?.name,
     },
     validationSchema: ValidSchema,
     onSubmit: (values) => {
@@ -40,7 +40,6 @@ const SearchPage = () => {
         <CardGame game={"fallout"} />
         <CardGame game={"fallout 76"} />
     </div>
-    {/* max-sm:px-12 */}
 
     </div>
   )

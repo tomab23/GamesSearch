@@ -31,7 +31,7 @@ const CardGame = ({ game }) => {
     },[])
 
     const handleGameInfo = () => {
-        navigate("/game")
+        navigate("/game", {state: game})
     }
   return (
     <div className='h-40 w-40 cursor-pointer hover:scale-105 flex flex-col card bg-base-100 shadow-xl
