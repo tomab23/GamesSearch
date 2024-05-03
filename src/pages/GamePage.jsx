@@ -20,7 +20,7 @@ const GamePage = () => {
     if (game === "fallout 3") {
       setCov(cover2);
     }
-    if (game === "fallout") {
+    if (game === "fallout new vegas") {
       setCov(cover3);
     }
     if (game === "fallout 76") {

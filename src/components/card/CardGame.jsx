@@ -20,7 +20,7 @@ const CardGame = ({ game }) => {
         setCov(cover2)
         setName("Fallout 3")
       }
-      if (game === "fallout") {
+      if (game === "fallout new vegas") {
         setCov(cover3)
         setName("Fallout New Vegas")
       }
